@@ -48,11 +48,11 @@ def extract_audio(video_path, audio_path):
 
 if __name__ == "__main__":
     for folder in os.listdir("youtube_videos"):
-        for video in folder:
-            print(video)
-            video_path = os.path.join("youtube_videos", folder)
-            # text = transcribe_audio(video_path)
-            caption_file = os.path.join(video_path, f"{video}.txt")
-            with open(caption_file, "w") as txt_file:
-                txt_file.write("tezta")
+        print(folder)
+        for content in os.listdir(f"youtube_videos/{folder}"):
+            print(content)
+            video_path = f"youtube_videos/{folder}/{content}"
+            text = transcribe_video(video_path)
+            with open(f"youtube_videos/{folder}/{content}.txt", "w") as f:
+                f.write(text)
 
