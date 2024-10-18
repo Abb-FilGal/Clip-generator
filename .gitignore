@@ -1,0 +1,17 @@
+ECHO is on.
+# Ignore environment files
+.env
+
+# Ignore Python bytecode
+*.pyc
+__pycache__/
+
+# Ignore logs
+*.log
+
+# Ignore node_modules directory
+node_modules/
+
+# Ignore build artifacts
+/dist/
+/build/
